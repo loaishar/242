@@ -7,20 +7,17 @@ OBJECTS_advancedClassificationRecursion=advancedClassificationRecursion.o;
 OBJECTS_basicClassification=basicClassification.o;
 FLAGS= -Wall -g
 
-all: libclassrec.so libclassloops.so libclassloops.a libclassrec.a progmains progmaind	
+all: libclassrec.so libclassloops.so libclassrec.a libclassloops.a progmains progmaind	
 progmains: $(OBJECTS_MAIN) libclassloops.a 
 	$(CC) $(FLAGS) -o progmains $(OBJECTS_MAIN) libclassloops.a
 progmaind: $(OBJECTS_MAIN)
 	$(CC) $(FLAGS) -o progmaind $(OBJECTS_MAIN) ./libclassrec.so
-
 
 progmains: $(OBJECTS_MAIN) libclassrec.a 
 	$(CC) $(FLAGS) -o progmains $(OBJECTS_MAIN) libclassrec.a
 
 progmaind: $(OBJECTS_MAIN)
 	$(CC) $(FLAGS) -o progmaind $(OBJECTS_MAIN) ./libclassloops.so
-	
-
 
 libclassrec.so: $(OBJECTS_advancedClassificationRecursion) $(OBJECTS_basicClassification)
 	$(CC) -shared -o libclassrec.so $(OBJECTS_advancedClassificationRecursion) $(OBJECTS_basicClassification)
@@ -32,10 +29,6 @@ libclassloops.so: $(OBJECTS_advancedClassificationRecursion) $(OBJECTS_basicClas
 
 libclassrec.a: $(OBJECTS_advancedClassificationRecursion) $(OBJECTS_basicClassification)
 	$(AR) -rcs libclassrec.a $(OBJECTS_advancedClassificationLoop) $(OBJECTS_basicClassification)	
-
-
-
-
 
 advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c
