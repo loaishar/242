@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "NumClass.h"
-
+/*
 int isPalindrome(int aj)
 {
     static int sum = 0;
@@ -16,7 +16,36 @@ int isPalindrome(int aj)
         return 0;
 }
 
-/**************************/
+**************************/
+
+int isPalindrome(int num)
+{
+    if(num == reverse(num))
+    {
+        return 1;
+    }
+    return 0;
+}
+
+
+int reverse(int num)
+{
+    int rem;
+    static int sum=0;
+    if(num!=0){
+            rem=num%10;
+            sum=sum*10+rem;
+            reverse(num/10);
+    }
+        else
+            return sum;
+    return sum;
+} 
+
+
+
+
+/******************************************************/
 
 int isArmstrong(int number) 
 {
