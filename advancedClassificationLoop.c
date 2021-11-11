@@ -10,7 +10,7 @@ int isArmstrong(int num)
 
 
 {
-   int num, originalNum, remainder, n = 0;
+   int  originalNum, remainder, n = 0;
    float result = 0.0;
 
    originalNum = num;
@@ -45,7 +45,7 @@ int isArmstrong(int num)
 /* will return if a number is a palindrome */ 
 int isPalindrome(int n)
 {
-int n, reversed = 0, remainder, original;
+int reversed = 0, remainder, original;
     original = n;
 
     // reversed integer is stored in reversed variable
