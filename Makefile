@@ -1,9 +1,9 @@
 CC=gcc
 AR=ar
 OBJECTS_MAIN=main.o
-OBJECTS_advancedClassificationLoop=advancedClassificationLoop.o;
-OBJECTS_advancedClassificationRecursion=advancedClassificationRecursion.o;
-OBJECTS_basicClassification=basicClassification.o;
+OBJECTS_advancedClassificationLoop=advancedClassificationLoop.o
+OBJECTS_advancedClassificationRecursion=advancedClassificationRecursion.o
+OBJECTS_basicClassification=basicClassification.o
 FLAGS= -Wall -g
 
 all: libclassrec.so libclassloops.so libclassrec.a libclassloops.a mains maindloop maindrec
