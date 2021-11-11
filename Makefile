@@ -30,7 +30,7 @@ libclassrec.so: $(OBJECTS_advancedClassificationRecursion) $(OBJECTS_basicClassi
 	$(CC) -shared -o libclassrec.so $(OBJECTS_advancedClassificationRecursion) $(OBJECTS_basicClassification)
 
 loopd: libclassloops.so
-libclassloops.so: $(OBJECTS_advancedClassificationRecursion) $(OBJECTS_basicClassification)
+libclassloops.so: $(OBJECTS_advancedClassificationLoop) $(OBJECTS_basicClassification)
 	$(CC) -shared -o libclassloops.so $(OBJECTS_advancedClassificationLoop) $(OBJECTS_basicClassification)
 
 
@@ -41,7 +41,7 @@ advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationRecursion.c
 basicClassification.o: basicClassification.c NumClass.h
 	$(CC) $(FLAGS) -c basicClassification.c
-main.o: main.c mylib.h  
+main.o: main.c NumClass.h  
 	$(CC) $(FLAGS) -c main.c 
 
 
@@ -49,4 +49,4 @@ main.o: main.c mylib.h
 .PHONY: clean all
 
 clean:
-	rm -f *.o *.a *.so progmains progmaind
+	rm -f *.o *.a *.so mains maindloop maindrec
