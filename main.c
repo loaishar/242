@@ -5,11 +5,10 @@
 /* Function declarations */
 
 
-void print_isArmstrong(int lowerLimit, int upperLimit)
+void print_isArmstrong(int lowerLimit, int upperLimit);
 void print_isPalindrome(int lowerLimit, int upperLimit);
 void print_isPrime(int lowerLimit, int upperLimit);
 void print_isStrong(int lowerLimit, int upperLimit);
-{
 
 
 int main()
