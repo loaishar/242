@@ -5,9 +5,10 @@
 
 
 // a function prototype for a function exported by library:
-int isArmstrong(int num);
-int isPalindrome(int n);
+int isArmstrong(int number);
+int isPalindrome(int num);
 int isPrime(int n);
 int isStrong(int n);
 int factorial(int r);
+int reverse(int num);
 #endif
